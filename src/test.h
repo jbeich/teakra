@@ -29,7 +29,7 @@ struct State {
 
 static_assert(std::is_trivially_copyable_v<State>);
 
-struct TestCase {
+struct alignas(8) TestCase {
     State before, after;
     u16 opcode, expand;
 };
